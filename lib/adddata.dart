@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:project_pm/cart_screen.dart';
 import 'package:image_picker/image_picker.dart';
@@ -124,7 +125,7 @@ class Input extends State<Nambah> {
               },
             ),
             DropdownButtonHideUnderline(
-              child: DropdownButton2<String>(  
+              child: DropdownButton2<String>(
                 isExpanded: true,
                 hint: Text(
                   'Select Item',
@@ -161,18 +162,36 @@ class Input extends State<Nambah> {
                 ),
               ),
             ),
-            ElevatedButton(
-              onPressed: () async {
-                final pickedFile =
-                    await _imagePicker.getImage(source: ImageSource.gallery);
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                ElevatedButton(
+                  onPressed: () async {
+                    final pickedFile = await _imagePicker.getImage(
+                        source: ImageSource.gallery);
 
-                if (pickedFile != null) {
-                  setState(() {
-                    _image = pickedFile.path;
-                  });
-                }
-              },
-              child: Text('Select Image'),
+                    if (pickedFile != null) {
+                      setState(() {
+                        _image = pickedFile.path;
+                      });
+                    }
+                  },
+                  child: Text('Select Image'),
+                ),
+                SizedBox(height: 20),
+                _image.isNotEmpty
+                    ? Image.file(
+                        File(_image),
+                        height: 150,
+                      )
+                    : Container(
+                        height: 200,
+                        color: Colors.grey,
+                        child: Center(
+                          child: Text('No Image Selected'),
+                        ),
+                      ),
+              ],
             ),
             const SizedBox(height: 20),
             ElevatedButton(
@@ -189,7 +208,10 @@ class Input extends State<Nambah> {
                           Text('Nama Produk: $_nama'),
                           Text('Harga Barang: $_harga'),
                           Text('Kategori Barang: $_kategori'),
-                          Text('Image Path: $_image')
+                          Image.file(
+                            File(_image),
+                            height: 200,
+                          ),
                         ],
                       ),
                     );
