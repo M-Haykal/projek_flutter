@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_pm/home_screen.dart';
 import 'package:project_pm/cart_screen.dart';
+import 'package:project_pm/product_screen.dart';
 
 class Navbar extends StatefulWidget {
   const Navbar({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class Navbar extends StatefulWidget {
 class _NavState extends State<Navbar> {
   int _selectedTab = 0;
 
-  List _pages = [Home(), ShoppingCartPage()];
+  List _pages = [Home(), ProductWidget(), ShoppingCartPage()];
 
   _changeTab(int index) {
     setState(() {

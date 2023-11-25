@@ -146,7 +146,7 @@ class Home extends StatelessWidget {
                           padding: EdgeInsets.all(16.0),
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius:  
+                            borderRadius:
                                 BorderRadius.all(Radius.circular(20.0)),
                             boxShadow: [
                               BoxShadow(
@@ -160,7 +160,7 @@ class Home extends StatelessWidget {
                           child: Column(
                             children: [
                               Image.network(
-                                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTacDKsc82IYiMQSN_DPenpq1RzGRnyAlqrFw&usqp=CAU")
+                                  "https://cdn-icons-png.flaticon.com/512/5787/5787016.png")
                             ],
                           ),
                         ),
@@ -182,7 +182,12 @@ class Home extends StatelessWidget {
                               ),
                             ],
                           ),
-                          child: Column(),
+                          child: Column(
+                            children: [
+                              Image.network(
+                                  "https://cdn-icons-png.flaticon.com/512/5787/5787016.png")
+                            ],
+                          ),
                         ),
                         Container(
                           height: 100,
@@ -202,7 +207,12 @@ class Home extends StatelessWidget {
                               ),
                             ],
                           ),
-                          child: Column(),
+                          child: Column(
+                            children: [
+                              Image.network(
+                                  "https://cdn-icons-png.flaticon.com/512/6190/6190582.png")
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -242,11 +252,11 @@ class Home extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Image.network(
-                                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmNLySWMAC-KuBhNTDe-IboFX5VIKziefYWg&usqp=CAU',
+                                'https://cdn-icons-png.flaticon.com/512/5787/5787016.png',
                                 height: 100,
                                 width: 130,
                               ),
-                              Text("Burger medium",
+                              Text("Burger King Medium",
                                   style: TextStyle(
                                       fontSize: 16.0,
                                       color: Colors.black,
@@ -258,12 +268,12 @@ class Home extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          height: 250,
+                          height: 200,
                           width: MediaQuery.of(context).size.width / 2 - 32,
                           margin: EdgeInsets.all(16.0),
                           padding: EdgeInsets.all(16.0),
                           decoration: BoxDecoration(
-                            color: Colors.yellow[100],
+                            color: Colors.white,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20.0)),
                             boxShadow: [
@@ -279,14 +289,19 @@ class Home extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.end,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Living room",
+                              Image.network(
+                                'https://cdn-icons-png.flaticon.com/512/5787/5787016.png',
+                                height: 100,
+                                width: 130,
+                              ),
+                              Text("Burger King Medium",
                                   style: TextStyle(
-                                      fontSize: 20.0,
-                                      color: Colors.brown,
+                                      fontSize: 16.0,
+                                      color: Colors.black,
                                       fontWeight: FontWeight.bold)),
-                              Text("2 Lights",
+                              Text("Rp. 50.000.00",
                                   style: TextStyle(
-                                      fontSize: 18.0, color: Colors.orange)),
+                                      fontSize: 18.0, color: Colors.grey)),
                             ],
                           ),
                         ),
@@ -298,12 +313,12 @@ class Home extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
-                          height: 250,
+                          height: 200,
                           width: MediaQuery.of(context).size.width / 2 - 32,
                           margin: EdgeInsets.all(16.0),
                           padding: EdgeInsets.all(16.0),
                           decoration: BoxDecoration(
-                            color: Colors.yellow[100],
+                            color: Colors.white,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20.0)),
                             boxShadow: [
@@ -319,24 +334,29 @@ class Home extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.end,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Kitchen",
+                              Image.network(
+                                'https://cdn-icons-png.flaticon.com/512/5787/5787016.png',
+                                height: 100,
+                                width: 130,
+                              ),
+                              Text("Burger King Medium",
                                   style: TextStyle(
-                                      fontSize: 20.0,
-                                      color: Colors.brown,
+                                      fontSize: 16.0,
+                                      color: Colors.black,
                                       fontWeight: FontWeight.bold)),
-                              Text("5 Lights",
+                              Text("Rp. 50.000.00",
                                   style: TextStyle(
-                                      fontSize: 18.0, color: Colors.orange)),
+                                      fontSize: 18.0, color: Colors.grey)),
                             ],
                           ),
                         ),
                         Container(
-                          height: 250,
+                          height: 200,
                           width: MediaQuery.of(context).size.width / 2 - 32,
                           margin: EdgeInsets.all(16.0),
                           padding: EdgeInsets.all(16.0),
                           decoration: BoxDecoration(
-                            color: Colors.yellow[100],
+                            color: Colors.white,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20.0)),
                             boxShadow: [
@@ -352,15 +372,19 @@ class Home extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.end,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              // place here your image
-                              Text("Bathroom",
+                              Image.network(
+                                'https://cdn-icons-png.flaticon.com/512/6190/6190582.png',
+                                height: 100,
+                                width: 130,
+                              ),
+                              Text("Juice Orange",
                                   style: TextStyle(
-                                      fontSize: 20.0,
-                                      color: Colors.brown,
+                                      fontSize: 16.0,
+                                      color: Colors.black,
                                       fontWeight: FontWeight.bold)),
-                              Text("1 Lights",
+                              Text("Rp. 15.000.00",
                                   style: TextStyle(
-                                      fontSize: 18.0, color: Colors.orange)),
+                                      fontSize: 18.0, color: Colors.grey)),
                             ],
                           ),
                         ),
@@ -372,12 +396,12 @@ class Home extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
-                          height: 250,
+                          height: 200,
                           width: MediaQuery.of(context).size.width / 2 - 32,
                           margin: EdgeInsets.all(16.0),
                           padding: EdgeInsets.all(16.0),
                           decoration: BoxDecoration(
-                            color: Colors.yellow[100],
+                            color: Colors.white,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20.0)),
                             boxShadow: [
@@ -393,29 +417,32 @@ class Home extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.end,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              // place here your image
-                              Text("Bed room",
+                              Image.network(
+                                'https://cdn-icons-png.flaticon.com/512/5787/5787016.png',
+                                height: 100,
+                                width: 130,
+                              ),
+                              Text("Burger King Medium",
                                   style: TextStyle(
-                                      fontSize: 20.0,
-                                      color: Colors.brown,
+                                      fontSize: 16.0,
+                                      color: Colors.black,
                                       fontWeight: FontWeight.bold)),
-                              Text("4 Lights",
+                              Text("Rp. 50.000.00",
                                   style: TextStyle(
-                                      fontSize: 18.0, color: Colors.orange)),
+                                      fontSize: 18.0, color: Colors.grey)),
                             ],
                           ),
                         ),
                         Container(
-                          height: 250,
+                          height: 200,
                           width: MediaQuery.of(context).size.width / 2 - 32,
                           margin: EdgeInsets.all(16.0),
                           padding: EdgeInsets.all(16.0),
                           decoration: BoxDecoration(
-                            color: Colors.yellow[100],
+                            color: Colors.white,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20.0)),
                             boxShadow: [
-                              // this is the shadow of the card
                               BoxShadow(
                                 color: Colors.black,
                                 spreadRadius: 0.5,
@@ -428,13 +455,17 @@ class Home extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.end,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              // place here your image
-                              Text("Living room",
+                              Image.network(
+                                'https://cdn-icons-png.flaticon.com/512/6190/6190582.png',
+                                height: 100,
+                                width: 130,
+                              ),
+                              Text("Juice Orange",
                                   style: TextStyle(
-                                      fontSize: 20.0,
-                                      color: Colors.brown,
+                                      fontSize: 16.0,
+                                      color: Colors.black,
                                       fontWeight: FontWeight.bold)),
-                              Text("2 Lights",
+                              Text("Rp. 15.000.00",
                                   style: TextStyle(
                                       fontSize: 18.0, color: Colors.grey)),
                             ],

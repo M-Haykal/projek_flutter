@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_pm/home_screen.dart';
+import 'package:project_pm/adddata.dart';
 
 void main() {
   runApp(MyApp());
@@ -50,7 +51,7 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Home()),
+                  MaterialPageRoute(builder: (context) => Home(),),
                 );
               },
             ),
@@ -81,16 +82,52 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
           )
         ],
       ),
-      body:  ListView(
+      body: ListView(
         children: [
-          ListTile(
-            leading: Image.network(
-              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmNLySWMAC-KuBhNTDe-IboFX5VIKziefYWg&usqp=CAU',
-              height: 100,
-              width: 100,
+          Container(
+            width: 100,
+            child: Card(
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              color: Colors.blue,
+              child: ListTile(
+                contentPadding: EdgeInsets.all(10),
+                title: Row(
+                  children: [
+                    Text(
+                      "Add Data",
+                      style: TextStyle(
+                          color: Colors.white),
+                    ),
+                    Icon(
+                      Icons.add,
+                      color: Colors.white, 
+                    ),
+                    SizedBox(width: 8),
+                  ],
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => AddData()),
+                  );
+                },
+              ),
             ),
-            title: Text('Burger King Medium'),
-            subtitle: Text('Rp 50,000'),
+          ),
+          ListTile(
+            contentPadding: EdgeInsets.all(10),
+            title: Text(
+              "Burger King Medium",
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+            ),
+            subtitle: Text("Rp. 50.000.00"),
+            leading: Image.network(
+                "https://cdn-icons-png.flaticon.com/512/5787/5787016.png"),
             trailing: IconButton(
               icon: Icon(Icons.delete),
               color: Colors.pink,
@@ -98,13 +135,15 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
             ),
           ),
           ListTile(
-            leading: Image.network(
-              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmNLySWMAC-KuBhNTDe-IboFX5VIKziefYWg&usqp=CAU',
-              height: 100,
-              width: 100,
+            contentPadding: EdgeInsets.all(10),
+            title: Text(
+              "Juice Orange",
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
             ),
-            title: Text('Tahu Bakso'),
-            subtitle: Text('Rp 40,000'),
+            subtitle: Text("Rp. 15.000.00"),
+            leading: Image.network(
+                "https://cdn-icons-png.flaticon.com/512/6190/6190582.png"),
             trailing: IconButton(
               icon: Icon(Icons.delete),
               color: Colors.pink,
@@ -112,15 +151,17 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
             ),
           ),
           ListTile(
-            leading: Image.network(
-              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmNLySWMAC-KuBhNTDe-IboFX5VIKziefYWg&usqp=CAU',
-              height: 100,
-              width: 100,
+            contentPadding: EdgeInsets.all(10),
+            title: Text(
+              "Burger King Small",
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
             ),
-            title: Text('Burger King Small'),
-            subtitle: Text('Rp 35,000'),
+            subtitle: Text("Rp. 30.000.00"),
+            leading: Image.network(
+                "https://cdn-icons-png.flaticon.com/512/5787/5787016.png"),
             trailing: IconButton(
-              icon: Icon(Icons.delete,),
+              icon: Icon(Icons.delete),
               color: Colors.pink,
               onPressed: () {},
             ),
