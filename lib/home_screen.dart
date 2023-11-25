@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:project_pm/home_screen.dart';
 import 'package:project_pm/cart_screen.dart';
+import 'package:project_pm/product_screen.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -39,13 +40,13 @@ class Home extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ShoppingCartPage()),
+                              builder: (context) => ProductWidget()),
                         );
                         break;
                       case 'option3':
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Text('hayy')),
+                          MaterialPageRoute(builder: (context) => ShoppingCartPage()),
                         );
                         break;
                     }
@@ -74,7 +75,7 @@ class Home extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ShoppingCartPage()),
+                                builder: (context) => ProductWidget()),
                           );
                         },
                       ),
@@ -88,7 +89,7 @@ class Home extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => Text('hayy')),
+                                builder: (context) => ShoppingCartPage()),
                           );
                         },
                       ),
