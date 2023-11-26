@@ -128,7 +128,7 @@ class Input extends State<Nambah> {
               child: DropdownButton2<String>(
                 isExpanded: true,
                 hint: Text(
-                  'Select Item',
+                  'Kategori Produk',
                   style: TextStyle(
                     fontSize: 14,
                     color: Theme.of(context).hintColor,
@@ -176,16 +176,16 @@ class Input extends State<Nambah> {
                       });
                     }
                   },
-                  child: Text('Select Image'),
+                  child: Text('Image'),
                 ),
                 SizedBox(height: 20),
                 _image.isNotEmpty
                     ? Image.file(
                         File(_image),
-                        height: 150,
+                        height: 140,
                       )
                     : Container(
-                        height: 200,
+                        height: 175,
                         color: Colors.grey,
                         child: Center(
                           child: Text('No Image Selected'),
